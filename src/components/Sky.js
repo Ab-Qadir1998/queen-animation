@@ -1,10 +1,9 @@
-import React, { useRef } from 'react'
-import SkyImg from '../images/sky.jpg'
+import React from 'react'
 import CloudImg from '../images/cloud.gif'
 import useWebAnimations from "@wellyshen/use-web-animations";
 import '../App.css'
  const Sky = () => {
-    const { ref, playState, getAnimation } = useWebAnimations({
+    const { ref, getAnimation } = useWebAnimations({
         keyframes: [
           {transform: "translateX(100%)"}, 
           {transform: "translateX(-100%)"},
@@ -23,11 +22,10 @@ import '../App.css'
     }
     return (
         <div className="sky" onClick={speedUp}>
-          {/* <button >speed Up</button> */}
           <div ref={ref}>
-          <img src={CloudImg} alt="cloud image" />
-          <img src={CloudImg} alt="cloud image"/>
-          <img src={CloudImg} alt="cloud image"/>
+          <img src={CloudImg} alt="cloud" />
+          <img src={CloudImg} alt="cloud"/>
+          <img src={CloudImg} alt="cloud"/>
           </div>
         </div>
     )
